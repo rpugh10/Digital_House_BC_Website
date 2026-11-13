@@ -10,7 +10,7 @@ const siteContent = {
     { title: 'Project name coming soon', description: 'Business or project introduction coming soon.', work: 'Description of our work coming soon.', image: '../assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' }
   ],
   team: [
-    { name: 'Team member name', role: 'Role coming soon', description: 'Short introduction coming soon.', image: '../assets/placeholders/team-silhouette.svg' },
-    { name: 'Team member name', role: 'Role coming soon', description: 'Short introduction coming soon.', image: '../assets/placeholders/team-silhouette.svg' }
+    { name: 'Team member name', role: 'Role coming soon', description: 'Short introduction coming soon.', image: '../assets/Profile_Pics/HEADSHOT.jpg' },
+    { name: 'Team member name', role: 'Role coming soon', description: 'Short introduction coming soon.', image: '../assets/Profile_Pics/Ryan_Headshot.png' }
   ]
 };
