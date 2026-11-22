@@ -1001,3 +1001,8 @@ footer {
   margin-top: 24px;
   padding: 0;
 }
+
+/* Keep headroom in Ryan's square portrait crop. */
+.team-image img[src$="Ryan_Headshot.png"] {
+  object-position: center 10%;
+}

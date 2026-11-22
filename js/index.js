@@ -92,7 +92,7 @@ siteContent.team.forEach(member => {
   const image = element('div', 'team-image');
   image.append(picture(member.image, 'Neutral silhouette placeholder; team photo coming soon', 400, 400));
   const body = element('div');
-  body.append(element('p', 'eyebrow', 'TEAM PROFILE COMING SOON'), element('h3', '', member.name), element('p', 'team-role', member.role), element('p', '', member.description));
+  body.append(element('h3', '', member.name), element('p', 'team-role', member.role), element('p', '', member.description));
   card.append(image, body);
   document.querySelector('#team-grid').append(card);
 });
