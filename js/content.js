@@ -10,7 +10,7 @@ const siteContent = {
     { title: 'Project name coming soon', description: 'Business or project introduction coming soon.', work: 'Description of our work coming soon.', image: '../assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' }
   ],
   team: [
-    { name: 'Team member name', role: 'Role coming soon', description: 'Short introduction coming soon.', image: '../assets/Profile_Pics/HEADSHOT.jpg' },
-    { name: 'Team member name', role: 'Role coming soon', description: 'Short introduction coming soon.', image: '../assets/Profile_Pics/Ryan_Headshot.png' }
+    { name: 'Ikaros Paraskevaidis', role: 'Co-Founder', description: 'My favorite foods are seed oils, McDonald\'s, and anything that is GOY I\'m currently exploring my sexuality because I LOVE dick in my ass', image: '../assets/Profile_Pics/HEADSHOT.jpg' },
+    { name: 'Ryan Pugh', role: 'Co-Founder & Technical Lead', description: 'Currently a 3rd year student at Thompson Rivers University studying Computer Science. Ryan brings software engineering principles learned in his studies to every project. He handles the technical aspects of each project.', image: '../assets/Profile_Pics/Ryan_Headshot.png' }
   ]
 };
