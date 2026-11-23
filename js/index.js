@@ -89,8 +89,10 @@ siteContent.projects.forEach(project => {
 });
 siteContent.team.forEach(member => {
   const card = element('article', 'team-card');
-  const image = element('div', 'team-image');
-  image.append(picture(member.image, 'Neutral silhouette placeholder; team photo coming soon', 400, 400));
+  const image = element('a', 'team-image');
+  image.href = member.image;
+  image.setAttribute('aria-label', `View full-size photo of ${member.name}`);
+  image.append(picture(member.image, `Portrait of ${member.name}`, 400, 400));
   const body = element('div');
   body.append(element('h3', '', member.name), element('p', 'team-role', member.role), element('p', '', member.description));
   card.append(image, body);
@@ -188,3 +190,29 @@ function setupTextReveals() {
 }
 
 setupTextReveals();
+
+
+// Keep portraits on this page in an accessible native modal.
+const photoDialog = document.querySelector('#team-photo-dialog');
+const fullSizePhoto = photoDialog.querySelector('.photo-dialog-image');
+let photoTrigger = null;
+
+document.querySelector('#team-grid').addEventListener('click', event => {
+  const link = event.target.closest('a.team-image');
+  if (!link || typeof photoDialog.showModal !== 'function') return;
+  event.preventDefault();
+  photoTrigger = link;
+  fullSizePhoto.src = link.href;
+  fullSizePhoto.alt = link.querySelector('img').alt;
+  photoDialog.setAttribute('aria-label', fullSizePhoto.alt);
+  photoDialog.showModal();
+});
+
+photoDialog.querySelector('.photo-dialog-close').addEventListener('click', () => {
+  photoDialog.close();
+});
+
+photoDialog.addEventListener('close', () => {
+  fullSizePhoto.removeAttribute('src');
+  photoTrigger?.focus({ preventScroll: true });
+});
