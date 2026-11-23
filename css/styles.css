@@ -1002,7 +1002,72 @@ footer {
   padding: 0;
 }
 
-/* Keep headroom in Ryan's square portrait crop. */
-.team-image img[src$="Ryan_Headshot.png"] {
-  object-position: center 10%;
+/* Match the wider framing of the other team portrait without cropping Ryan's head. */
+.team-image img[src$="Ryan_Pugh_Headshot_Real.png"] {
+  object-fit: contain;
+  object-position: center;
+  padding-top: 4%;
+  background: #fff;
+}
+
+/* The frame defines the size so portrait proportions cannot change it. */
+.team-image {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #fff;
+  cursor: zoom-in;
+}
+
+.team-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Full-size team portraits, with an always-visible close control. */
+.photo-dialog {
+  width: min(640px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 52px 16px 16px;
+  border: 1px solid var(--stone);
+  border-radius: var(--radius);
+  background: var(--ivory);
+  box-shadow: 0 20px 70px #0006;
+}
+
+.photo-dialog::backdrop {
+  background: #10251be6;
+}
+
+.photo-dialog-image {
+  width: 100%;
+  height: min(640px, calc(100dvh - 102px));
+  object-fit: contain;
+  background: #fff;
+}
+
+.photo-dialog-close {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--evergreen);
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.photo-dialog-close:hover {
+  background: var(--stone);
 }
