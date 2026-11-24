@@ -73,7 +73,7 @@ siteContent.projects.forEach(project => {
   const card = element('article', 'project-card');
   const media = element('div', 'project-media');
   media.append(picture(project.image, project.imageAlt, project.imageWidth ?? 800, project.imageHeight ?? 500));
-  if (project.image.startsWith('../assets/placeholders/')) {
+  if (project.image.startsWith('/assets/placeholders/')) {
     media.append(element('span', 'placeholder-label', 'PROJECT PLACEHOLDER'));
   }
   const body = element('div', 'project-body');
