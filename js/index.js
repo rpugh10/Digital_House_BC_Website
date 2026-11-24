@@ -116,7 +116,7 @@ navigation.addEventListener('click', event => {
   const link = event.target.closest('a');
   if (!link) return;
   closeMenu();
-  if (window.matchMedia('(max-width: 760px)').matches) {
+  if (link.hash && window.matchMedia('(max-width: 760px)').matches) {
     const target = document.querySelector(link.hash);
     target.setAttribute('tabindex', '-1');
     target.focus({ preventScroll: true });

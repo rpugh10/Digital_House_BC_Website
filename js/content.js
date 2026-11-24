@@ -7,7 +7,7 @@ const siteContent = {
   ],
   projects: [
     { title: 'TRU Gaming Club Website', description: 'A secure, mobile-responsive web application created to manage club memberships, user accounts, and community gaming events from one easy-to-use platform.', work: 'Link to live site: Placeholder', image: '../assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' },
-    { title: 'Project name coming soon', description: 'Business or project introduction coming soon.', work: 'Description of our work coming soon.', image: '../assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' }
+    { title: 'Project name coming soon', description: 'Business or project introduction coming soon.', work: 'Link to live site: Placeholder', image: '../assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' }
   ],
   team: [
     { name: 'Ikaros Paraskevaidis', role: 'Co-Founder', description: '"With a background in hospitality and customer service, I enjoy working with people, building relationships, and creating great experiences. I\'m currently studying Tourism Management at Thompson Rivers University and bring strong teamwork and leadership skills, along with a passion for business and travel."', image: '../assets/Profile_Pics/HEADSHOT.jpg' },
