@@ -486,9 +486,6 @@ h1 {
   aspect-ratio: 1.6;
   object-fit: cover;
 }
-.project-card:nth-child(2) .project-media img {
-  transform: scaleX(-1);
-}
 .placeholder-label {
   position: absolute;
   left: 20px;
