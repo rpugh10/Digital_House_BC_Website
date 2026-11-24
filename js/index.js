@@ -72,9 +72,13 @@ siteContent.services.forEach((service, index) => {
 siteContent.projects.forEach(project => {
   const card = element('article', 'project-card');
   const media = element('div', 'project-media');
-  media.append(picture(project.image, project.imageAlt, 800, 500), element('span', 'placeholder-label', 'PROJECT PLACEHOLDER'));
+  media.append(picture(project.image, project.imageAlt, project.imageWidth ?? 800, project.imageHeight ?? 500));
+  if (project.image.startsWith('../assets/placeholders/')) {
+    media.append(element('span', 'placeholder-label', 'PROJECT PLACEHOLDER'));
+  }
   const body = element('div', 'project-body');
-  body.append(element('h3', '', project.title), element('p', '', project.description), element('p', 'project-work', project.work));
+  body.append(element('h3', '', project.title), element('p', '', project.description));
+  if (project.work) body.append(element('p', 'project-work', project.work));
   if (project.services.length) body.append(element('p', 'project-work', project.services.join(' · ')));
   try {
     const destination = new URL(project.url);
