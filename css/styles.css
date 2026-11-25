@@ -1114,7 +1114,7 @@ footer {
   }
 }
 
-/* Portfolio action stays available to touch and keyboard users. */
+/* Reveal the project action on card hover or keyboard focus only. */
 .project-view-button {
   position: absolute;
   top: 50%;
@@ -1130,11 +1130,13 @@ footer {
   font-weight: 600;
   white-space: nowrap;
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
 }
-@media (hover: hover) {
-  .project-view-button { opacity: 0; }
-  .project-card:hover .project-view-button,
-  .project-card:focus-within .project-view-button { opacity: 1; }
+.project-card:hover .project-view-button,
+.project-card:focus-within .project-view-button {
+  opacity: 1;
+  pointer-events: auto;
 }
 @media (prefers-reduced-motion: no-preference) {
   .project-view-button { transition: opacity 180ms ease; }
