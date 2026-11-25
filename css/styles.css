@@ -1068,3 +1068,48 @@ footer {
 .photo-dialog-close:hover {
   background: var(--stone);
 }
+
+/* Project cards respond to mouse hover and keyboard focus on project links. */
+.project-media {
+  overflow: hidden;
+}
+
+.project-card:focus-within {
+  border-color: var(--evergreen);
+  box-shadow: 0 12px 28px #23382e20;
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    border-color: var(--evergreen);
+    box-shadow: 0 12px 28px #23382e20;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card {
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+
+  .project-media img {
+    transition: scale 300ms ease;
+  }
+
+  .project-card:focus-within {
+    transform: translateY(-5px);
+  }
+
+  .project-card:focus-within .project-media img {
+    scale: 1.04;
+  }
+
+  @media (hover: hover) {
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card:hover .project-media img {
+      scale: 1.04;
+    }
+  }
+}
