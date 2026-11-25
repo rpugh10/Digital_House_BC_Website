@@ -6,8 +6,8 @@ const siteContent = {
     { title: 'Updates & maintenance', description: 'Keep your website useful as your business changes. Talk with us about updating your content and maintaining your existing website.', detail: 'Keep your information up to date', icon: 'updates' }
   ],
   projects: [
-    { title: 'TRU Gaming Club Website', description: 'A secure, mobile-responsive web application created to manage club memberships, user accounts, and community gaming events from one easy-to-use platform.', work: 'Link to live site: Placeholder', image: '/assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' },
-    { title: 'Urban Craft', description: 'A demo website by Digital House BC.', image: '/assets/demo_websites/Real_Urban_Craft.png', imageAlt: 'Screenshot of the Urban Craft demo website', imageWidth: 2880, imageHeight: 1624, services: [], url: '' }
+    { title: 'TRU Gaming Club Website', page: '/html/tru-gaming-club.html', description: 'A secure, mobile-responsive web application created to manage club memberships, user accounts, and community gaming events from one easy-to-use platform.', work: 'Link to live site: Placeholder', image: '/assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' },
+    { title: 'Urban Craft', page: '/html/urban-craft.html', description: 'A demo website by Digital House BC.', image: '/assets/demo_websites/Real_Urban_Craft.png', imageAlt: 'Screenshot of the Urban Craft demo website', imageWidth: 2880, imageHeight: 1624, services: [], url: 'https://urbancraft-sigma.vercel.app/' }
   ],
   team: [
     { name: 'Ikaros Paraskevaidis', role: 'Co-Founder', description: '"With a background in hospitality and customer service, I enjoy working with people, building relationships, and creating great experiences. I\'m currently studying Tourism Management at Thompson Rivers University and bring strong teamwork and leadership skills, along with a passion for business and travel."', image: '/assets/Profile_Pics/HEADSHOT.jpg' },

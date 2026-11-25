@@ -69,23 +69,6 @@ siteContent.services.forEach((service, index) => {
   card.append(top, element('h3', '', service.title), element('p', '', service.description), element('p', 'service-detail', service.detail));
   document.querySelector('#services-grid').append(card);
 });
-// One reusable project viewer for portfolio entries without live destinations.
-const projectViewer = element('dialog', 'project-viewer');
-projectViewer.setAttribute('aria-labelledby', 'project-viewer-title');
-const closeProject = element('button', 'project-viewer-close', '\u00d7');
-closeProject.type = 'button';
-closeProject.setAttribute('aria-label', 'Close project');
-const projectPreview = element('img', 'project-viewer-image');
-const projectTitle = element('h2');
-projectTitle.id = 'project-viewer-title';
-const projectDescription = element('p');
-const projectWork = element('p');
-projectViewer.append(closeProject, projectPreview, projectTitle, projectDescription, projectWork);
-document.body.append(projectViewer);
-let projectOpener = null;
-closeProject.addEventListener('click', () => projectViewer.close());
-projectViewer.addEventListener('close', () => projectOpener?.focus({ preventScroll: true }));
-
 siteContent.projects.forEach(project => {
   const card = element('article', 'project-card');
   const media = element('div', 'project-media');
@@ -93,21 +76,9 @@ siteContent.projects.forEach(project => {
   if (project.image.startsWith('/assets/placeholders/')) {
     media.append(element('span', 'placeholder-label', 'PROJECT PLACEHOLDER'));
   }
-  const viewProject = element('button', 'project-view-button', 'View project');
-  viewProject.type = 'button';
+  const viewProject = element('a', 'project-view-button', 'View project');
+  viewProject.href = project.page;
   viewProject.setAttribute('aria-label', `View project: ${project.title}`);
-  viewProject.setAttribute('aria-haspopup', 'dialog');
-  viewProject.addEventListener('click', () => {
-    projectOpener = viewProject;
-    projectPreview.src = project.image;
-    projectPreview.alt = project.imageAlt;
-    projectTitle.textContent = project.title;
-    projectDescription.textContent = project.description;
-    projectWork.textContent = project.work || '';
-    projectWork.hidden = !project.work;
-    projectViewer.showModal();
-    closeProject.focus();
-  });
   media.append(viewProject);
   const body = element('div', 'project-body');
   body.append(element('h3', '', project.title), element('p', '', project.description));
