@@ -162,7 +162,7 @@ function setupTextReveals() {
     '.contact-note strong', '.footer-bottom > span'
   ].join(', ');
   const items = [...document.querySelectorAll(selector)].filter(item =>
-    !item.closest('form, nav') && !item.parentElement.closest(selector)
+    !item.matches('.project-view-button') && !item.closest('form, nav') && !item.parentElement.closest(selector)
   );
 
   const observer = new IntersectionObserver(entries => {
