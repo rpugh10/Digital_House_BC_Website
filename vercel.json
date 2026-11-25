@@ -3,7 +3,21 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "rewrites": [
-    { "source": "/", "destination": "/html/index.html" },
-    { "source": "/pricing", "destination": "/html/pricing.html" }
+    {
+      "source": "/",
+      "destination": "/html/index.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/html/pricing.html"
+    },
+    {
+      "source": "/projects/tru-gaming-club",
+      "destination": "/html/tru-gaming-club.html"
+    },
+    {
+      "source": "/projects/urban-craft",
+      "destination": "/html/urban-craft.html"
+    }
   ]
 }
