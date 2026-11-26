@@ -10,7 +10,7 @@ const siteContent = {
     { title: 'Urban Craft', page: '/html/urban-craft.html', description: 'A demo website by Digital House BC.', image: '/assets/demo_websites/Real_Urban_Craft.png', imageAlt: 'Screenshot of the Urban Craft demo website', imageWidth: 2880, imageHeight: 1624, services: [], url: 'https://urbancraft-sigma.vercel.app/' }
   ],
   team: [
-    { name: 'Ikaros Paraskevaidis', role: 'Co-Founder', description: '"With a background in hospitality and customer service, I enjoy working with people, building relationships, and creating great experiences. I\'m currently studying Tourism Management at Thompson Rivers University and bring strong teamwork and leadership skills, along with a passion for business and travel."', image: '/assets/Profile_Pics/HEADSHOT.jpg' },
-    { name: 'Ryan Pugh', role: 'Co-Founder & Technical Lead', description: '"I\'m currently a 3rd year student at Thompson Rivers University studying Computer Science. I bring strong problem-solving skills and a passion for technology. Outside of school, I enjoy skiing, travel, and watching UFC."', image: '/assets/Profile_Pics/Ryan_Pugh_Headshot_Real.png' }
+    { name: 'Ikaros Paraskevaidis', role: 'Co-Founder & CEO', description: '"With a background in hospitality and customer service, I enjoy working with people, building relationships, and creating great experiences. I\'m currently studying Tourism Management at Thompson Rivers University and bring strong teamwork and leadership skills, along with a passion for business and travel."', image: '/assets/Profile_Pics/HEADSHOT.jpg' },
+    { name: 'Ryan Pugh', role: 'Co-Founder & CTO', description: '"I\'m currently a 3rd year student at Thompson Rivers University studying Computer Science. I bring strong problem-solving skills and a passion for technology. Outside of school, I enjoy skiing, travel, and watching UFC."', image: '/assets/Profile_Pics/Ryan_Pugh_Headshot_Real.png' }
   ]
 };
