@@ -6,7 +6,7 @@ const siteContent = {
     { title: 'Updates & maintenance', description: 'Keep your website useful as your business changes. Talk with us about updating your content and maintaining your existing website.', detail: 'Keep your information up to date', icon: 'updates' }
   ],
   projects: [
-    { title: 'TRU Gaming Club Website', page: '/html/tru-gaming-club.html', description: 'A secure, mobile-responsive web application created to manage club memberships, user accounts, and community gaming events from one easy-to-use platform.', work: 'Link to live site: Placeholder', image: '/assets/placeholders/project-landscape.svg', imageAlt: 'Neutral landscape placeholder for a future project', services: [], url: '' },
+    { title: 'TRU Gaming Club Website', page: '/html/tru-gaming-club.html', description: 'A secure, mobile-responsive web application created to manage club memberships, user accounts, and community gaming events from one easy-to-use platform.', image: '/assets/demo_websites/TRU_Gaming%20site.png', imageAlt: 'Screenshot of the TRU Gaming Club login page', imageWidth: 1916, imageHeight: 993, services: [], url: 'https://trugaming.xo.je/' },
     { title: 'Urban Craft', page: '/html/urban-craft.html', description: 'A demo website by Digital House BC.', image: '/assets/demo_websites/Real_Urban_Craft.png', imageAlt: 'Screenshot of the Urban Craft demo website', imageWidth: 2880, imageHeight: 1624, services: [], url: 'https://urbancraft-sigma.vercel.app/' }
   ],
   team: [
