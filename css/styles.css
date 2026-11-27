@@ -249,8 +249,8 @@ nav a[aria-current] {
 
 @media (prefers-reduced-motion: no-preference) {
   /* Extra image height keeps the edges covered as the background moves. */
-  .has-parallax .hero-photo,
-  .has-parallax .services-photo {
+  .parallax-section .hero-photo,
+  .parallax-section .services-photo {
     top: -100px;
     height: calc(100% + 200px);
     transform: translate3d(0, var(--parallax-offset, 0px), 0);
