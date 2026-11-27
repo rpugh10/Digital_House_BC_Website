@@ -2,6 +2,7 @@
 <html lang="en-CA">
   <head>
     <meta charset="UTF-8" />
+    <script>document.documentElement.classList.add("js");</script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -10,10 +11,14 @@
     <meta name="theme-color" content="#123d32" />
     <title>Digital House BC | Websites for Kamloops businesses</title>
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="preload" as="image" href="/assets/background/hero-1800.jpg" imagesrcset="/assets/background/hero-800.jpg 800w, /assets/background/hero-1200.jpg 1200w, /assets/background/hero-1800.jpg 1800w" imagesizes="100vw" fetchpriority="high" />
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="/js/content.js" type="text/plain" data-page-script></script>
     <script src="/js/index.js" type="text/plain" data-page-script></script>
     <script src="/js/contact.js" type="text/plain" data-page-script></script>
+    <link rel="preload" href="/js/content.js" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/js/index.js" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="/js/contact.js" as="fetch" crossorigin="anonymous" />
     <script src="/js/router.js" defer></script>
   </head>
   <body>
@@ -30,7 +35,6 @@
           type="button"
           aria-expanded="false"
           aria-controls="primary-nav"
-          hidden
         >
           Menu <span aria-hidden="true">☰</span>
         </button>
@@ -45,7 +49,10 @@
       <section id="home" class="hero parallax-section" aria-labelledby="hero-title">
         <img
           class="hero-photo"
-          src="/assets/background/homepage-1800.jpg"
+          src="/assets/background/hero-1800.jpg"
+          srcset="/assets/background/hero-800.jpg 800w, /assets/background/hero-1200.jpg 1200w, /assets/background/hero-1800.jpg 1800w"
+          sizes="100vw"
+          loading="eager"
           width="1800"
           height="1200"
           alt=""
@@ -116,7 +123,13 @@
               our initial service areas; we’ll discuss what your project needs.
             </p>
           </div>
-          <div id="services-grid" class="services-grid"></div>
+          <div id="services-grid" class="services-grid">
+<!-- static:services:start -->
+<article class="service-card"><div class="service-top"><span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2"/><path d="M3 11h26M8 8h1m3 0h1M9 17h14M9 22h9"/></svg></span><span class="card-number">01</span></div><h3>Website design &amp; development</h3><p>A clear, welcoming home for your business online. Bring your services, business information, and contact details together in one place.</p><p class="service-detail">Give your business a place online</p></article>
+<article class="service-card"><div class="service-top"><span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="9" y="2" width="15" height="28" rx="3"/><path d="M14 6h5m-4 20h3"/></svg></span><span class="card-number">02</span></div><h3>Mobile-friendly layouts</h3><p>Make your website easy to read and explore on phones, tablets, and computers, so customers can find the details they need wherever they are.</p><p class="service-detail">Make every screen feel considered</p></article>
+<article class="service-card"><div class="service-top"><span class="service-icon"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M27 13a11 11 0 0 0-19-5L4 12m0-7v7h7m-6 7a11 11 0 0 0 19 5l4-4m0 7v-7h-7"/></svg></span><span class="card-number">03</span></div><h3>Updates &amp; maintenance</h3><p>Keep your website useful as your business changes. Talk with us about updating your content and maintaining your existing website.</p><p class="service-detail">Keep your information up to date</p></article>
+<!-- static:services:end -->
+</div>
           <noscript
             ><p>
               Website design and development · Mobile-friendly layouts · Website updates and
@@ -137,7 +150,12 @@
               of our work.
             </p>
           </div>
-          <div id="portfolio-grid" class="portfolio-grid"></div>
+          <div id="portfolio-grid" class="portfolio-grid">
+<!-- static:portfolio:start -->
+<article class="project-card"><div class="project-media"><img src="/assets/demo_websites/TRU_Gaming%20site.png" alt="Screenshot of the TRU Gaming Club login page" width="1916" height="993" loading="lazy" decoding="async"><a class="project-view-button" href="/html/tru-gaming-club.html" aria-label="View project: TRU Gaming Club Website">View project</a></div><div class="project-body"><h3>TRU Gaming Club Website</h3><p>A secure, mobile-responsive web application created to manage club memberships, user accounts, and community gaming events from one easy-to-use platform.</p><a class="inline-link" href="https://trugaming.xo.je/">Visit website &#8599;</a></div></article>
+<article class="project-card"><div class="project-media"><img src="/assets/demo_websites/Real_Urban_Craft.png" alt="Screenshot of the Urban Craft demo website" width="2880" height="1624" loading="lazy" decoding="async"><a class="project-view-button" href="/html/urban-craft.html" aria-label="View project: Urban Craft">View project</a></div><div class="project-body"><h3>Urban Craft</h3><p>A demo website by Digital House BC.</p><a class="inline-link" href="https://urbancraft-sigma.vercel.app/">Visit website &#8599;</a></div></article>
+<!-- static:portfolio:end -->
+</div>
           <noscript>
             <article class="project-card">
               <div class="project-media">
@@ -166,7 +184,12 @@
               </p>
             </div>
           </div>
-          <div id="team-grid" class="team-grid"></div>
+          <div id="team-grid" class="team-grid">
+<!-- static:team:start -->
+<article class="team-card"><a class="team-image" href="/assets/Profile_Pics/HEADSHOT.jpg" aria-label="View full-size photo of Ikaros Paraskevaidis"><img src="/assets/Profile_Pics/HEADSHOT.jpg" alt="Portrait of Ikaros Paraskevaidis" width="400" height="400" loading="lazy" decoding="async"></a><div><h3>Ikaros Paraskevaidis</h3><p class="team-role">Co-Founder &amp; CEO</p><p>&quot;With a background in hospitality and customer service, I enjoy working with people, building relationships, and creating great experiences. I&#39;m currently studying Tourism Management at Thompson Rivers University and bring strong teamwork and leadership skills, along with a passion for business and travel.&quot;</p></div></article>
+<article class="team-card"><a class="team-image" href="/assets/Profile_Pics/Ryan_Pugh_Headshot_Real.png" aria-label="View full-size photo of Ryan Pugh"><img src="/assets/Profile_Pics/Ryan_Pugh_Headshot_Real.png" alt="Portrait of Ryan Pugh" width="400" height="400" loading="lazy" decoding="async"></a><div><h3>Ryan Pugh</h3><p class="team-role">Co-Founder &amp; CTO</p><p>&quot;I&#39;m currently a 3rd year student at Thompson Rivers University studying Computer Science. I enjoy solving problems, collaborating with others, and learning new technologies. I bring a strong passion for technology and a commitment to delivering high-quality results.&quot;</p></div></article>
+<!-- static:team:end -->
+</div>
           <noscript><p>Two team profiles are coming soon.</p></noscript>
         </div>
       </section>
@@ -250,7 +273,7 @@
     <footer>
       <div class="container footer-top">
         <a class="brand" href="#home"
-          ><img src="/assets/logo/Mountain_Sunset_.png" alt="" width="480" height="480" /><span
+          ><img src="/assets/logo/Mountain_Sunset_.png" alt="" width="1774" height="887" /><span
             >Digital House <b>BC</b><small>WEBSITES WITH LOCAL ROOTS</small></span
           ></a
         >
