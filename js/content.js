@@ -7,7 +7,7 @@ const siteContent = {
   ],
   projects: [
     { title: 'TRU Gaming Club Website', page: '/html/tru-gaming-club.html', description: 'A secure, mobile-responsive web application created to manage club memberships, user accounts, and community gaming events from one easy-to-use platform.', image: '/assets/demo_websites/TRU_Gaming%20site.png', imageAlt: 'Screenshot of the TRU Gaming Club login page', imageWidth: 1916, imageHeight: 993, services: [], url: 'https://trugaming.xo.je/' },
-    { title: 'Urban Craft', page: '/html/urban-craft.html', description: 'A demo website by Digital House BC.', image: '/assets/demo_websites/Real_Urban_Craft.png', imageAlt: 'Screenshot of the Urban Craft demo website', imageWidth: 2880, imageHeight: 1624, services: [], url: 'https://urbancraft-sigma.vercel.app/' }
+    { title: 'Urban Craft', page: '/html/urban-craft.html', description: 'A clean modern website built for Urban Craft, to showcase their construction services, highlight completed projects, and connect them with potential customers.', image: '/assets/demo_websites/Real_Urban_Craft.png', imageAlt: 'Screenshot of the Urban Craft demo website', imageWidth: 2880, imageHeight: 1624, services: [], url: 'https://urbancraft-sigma.vercel.app/' }
   ],
   team: [
     { name: 'Ikaros Paraskevaidis', role: 'Co-Founder & CEO', description: '"With a background in hospitality and customer service, I enjoy working with people, building relationships, and creating great experiences. I\'m currently studying Tourism Management at Thompson Rivers University and bring strong teamwork and leadership skills, along with a passion for business and travel."', image: '/assets/Profile_Pics/HEADSHOT.jpg' },
