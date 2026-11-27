@@ -60,7 +60,7 @@ function picture(src, alt, width, height) {
   Object.assign(img, { src, alt, width, height, loading: 'lazy' });
   return img;
 }
-siteContent.services.forEach((service, index) => {
+(document.querySelector('#services-grid').children.length ? [] : siteContent.services).forEach((service, index) => {
   const card = element('article', 'service-card');
   const top = element('div', 'service-top');
   const icon = element('span', 'service-icon');
@@ -69,7 +69,7 @@ siteContent.services.forEach((service, index) => {
   card.append(top, element('h3', '', service.title), element('p', '', service.description), element('p', 'service-detail', service.detail));
   document.querySelector('#services-grid').append(card);
 });
-siteContent.projects.forEach(project => {
+(document.querySelector('#portfolio-grid').children.length ? [] : siteContent.projects).forEach(project => {
   const card = element('article', 'project-card');
   const media = element('div', 'project-media');
   media.append(picture(project.image, project.imageAlt, project.imageWidth ?? 800, project.imageHeight ?? 500));
@@ -95,7 +95,7 @@ siteContent.projects.forEach(project => {
   card.append(media, body);
   document.querySelector('#portfolio-grid').append(card);
 });
-siteContent.team.forEach(member => {
+(document.querySelector('#team-grid').children.length ? [] : siteContent.team).forEach(member => {
   const card = element('article', 'team-card');
   const image = element('a', 'team-image');
   image.href = member.image;
@@ -174,6 +174,7 @@ function setupTextReveals() {
   }, { threshold: 0.15 });
 
   items.forEach(item => {
+    if (item.getBoundingClientRect().top < window.innerHeight) return;
     const siblings = items.filter(candidate => candidate.parentElement === item.parentElement);
     const delay = 200 + Math.min(siblings.indexOf(item), 3) * 80;
     item.style.setProperty('--reveal-delay', `${delay}ms`);

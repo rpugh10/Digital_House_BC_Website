@@ -36,7 +36,7 @@
     pageObservers.forEach(observer => observer.disconnect());
     pageObservers = [];
     pageEvents = new AbortController();
-    document.documentElement.classList.remove('js');
+
     const originalAdd = EventTarget.prototype.addEventListener;
     // Page initialisers register their events synchronously. Tie those listeners
     // to this page so returning to it cannot accumulate duplicate handlers.

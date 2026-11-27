@@ -76,6 +76,7 @@ function setupPricingReveals() {
   }
 
   items.forEach(item => {
+    if (item.getBoundingClientRect().top < window.innerHeight) return;
     const siblings = items.filter(candidate => candidate.parentElement === item.parentElement);
     const delay = 200 + Math.min(siblings.indexOf(item), 3) * 80;
     item.style.setProperty('--pricing-reveal-delay', `${delay}ms`);
