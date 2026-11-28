@@ -114,7 +114,7 @@
             <p class="eyebrow">A FEW HELPFUL ANSWERS</p>
             <h2 id="faq-title">Frequently asked questions</h2>
             <p>Getting your business online starts with a clear conversation. Here are a few things to know before we talk.</p>
-            <a class="inline-link" href="/html/index.html#contact">Have another question? Get in touch</a>
+            <a class="inline-link question-inquiry" href="/html/index.html#contact" aria-haspopup="dialog" aria-controls="question-dialog">Have another question? Get in touch</a>
           </div>
           <div class="faq-list">
             <details class="faq-item">
@@ -226,6 +226,21 @@
       <p id="contact-result-message"></p>
       <form method="dialog">
         <button class="button" type="submit" autofocus>Close</button>
+      </form>
+    </dialog>
+    <dialog id="question-dialog" class="project-dialog" aria-labelledby="question-dialog-title" aria-describedby="question-dialog-description">
+      <button class="project-dialog-close" type="button" aria-label="Close question form">&times;</button>
+      <h2 id="question-dialog-title">Have another question?</h2>
+      <p id="question-dialog-description">Send us your question and the email address where we can reply.</p>
+      <form id="question-form" class="question-form" data-formspree-form action="https://formspree.io/f/mrpqborz" method="post">
+        <label for="question-email">Email <span>(required)</span></label>
+        <input id="question-email" name="email" type="email" autocomplete="email" required maxlength="254" />
+        <label for="question-message">Your question <span>(required)</span></label>
+        <textarea id="question-message" name="message" rows="5" required maxlength="3000"></textarea>
+        <input type="hidden" name="enquiry_type" value="Pricing question" />
+        <button class="button" type="submit">Send question</button>
+        <p class="form-footnote">Your question is sent securely through Formspree.</p>
+        <p class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
       </form>
     </dialog>
   </body>
