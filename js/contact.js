@@ -2,12 +2,17 @@
 
 // Contact submission stays independent from navigation and animations.
 (() => {
-  const form = document.querySelector("#contact-form");
-  if (!form) return;
+  const forms = document.querySelectorAll("#contact-form, [data-formspree-form]");
+  let resultTrigger = null;
+  document.querySelector("#contact-result")?.addEventListener("close", () => {
+    resultTrigger?.focus({ preventScroll: true });
+  });
+
+  forms.forEach(form => {
 
   const endpoint = "https://formspree.io/f/mrpqborz";
   const button = form.querySelector('button[type="submit"]');
-  const status = form.querySelector("#form-status");
+  const status = form.querySelector(".form-status");
   const popup = document.querySelector("#contact-result");
   const popupTitle = document.querySelector("#contact-result-title");
   const popupMessage = document.querySelector("#contact-result-message");
@@ -22,6 +27,7 @@
 
     const title = state === "success" ? "Message sent" : "Message not confirmed";
     if (popup && typeof popup.showModal === "function") {
+      resultTrigger = button;
       popupTitle.textContent = title;
       popupMessage.textContent = message;
       popup.dataset.state = state;
@@ -31,8 +37,7 @@
     }
   }
 
-  // Native dialog handles Escape and traps focus; restore it on dismissal.
-  popup?.addEventListener("close", () => button.focus({ preventScroll: true }));
+
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -78,5 +83,6 @@
       button.innerHTML = buttonLabel;
       form.removeAttribute("aria-busy");
     }
+  });
   });
 })();

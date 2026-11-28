@@ -98,3 +98,20 @@ function setupPricingReveals() {
   });
 }
 setupPricingReveals();
+
+
+// A separate, shorter enquiry for visitors with a pricing question.
+const questionDialog = document.querySelector('#question-dialog');
+const questionLink = document.querySelector('.question-inquiry');
+questionLink.addEventListener('click', event => {
+  if (typeof questionDialog.showModal !== 'function') return;
+  event.preventDefault();
+  questionDialog.showModal();
+  questionDialog.querySelector('#question-email').focus({ preventScroll: true });
+});
+questionDialog.querySelector('.project-dialog-close').addEventListener('click', () => {
+  questionDialog.close();
+});
+questionDialog.addEventListener('close', () => {
+  questionLink.focus({ preventScroll: true });
+});
